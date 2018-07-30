@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/linzichao/.oh-my-zsh
 
@@ -8,7 +9,9 @@ export ZSH=/Users/linzichao/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(load battery)
+export POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+export POWERLEVEL9K_SHORTEN_STRATEGY="truncate_folders"
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv load battery)
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Set list of themes to load
@@ -60,8 +63,7 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-plugins=(zsh-autosuggestions)
+plugins=(git zsh-autosuggestions virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,7 +102,12 @@ DEFAULT_USER=linzichao
 
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-alias 2home='ssh linzichao@218.161.32.188'
+
+alias cfda2='ssh intern@cfda2.citi.sinica.edu.tw'
+alias cfda3='ssh intern@cfda3.citi.sinica.edu.tw'
+alias clip2='ssh zclin@clip2.cs.nccu.edu.tw'
+alias clip3='ssh zclin@clip3.cs.nccu.edu.tw'
+
 alias ctags="`brew --prefix`/bin/ctags"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
@@ -112,3 +119,7 @@ export PATH="$PATH:/usr/local/opt/python@2/libexec/bin:/Users/linzichao/.rvm/gem
 export PATH="/Users/linzichao/anaconda/bin:$PATH"
 
 export GPG_TTY=$(tty)
+source $(brew --prefix nvm)/nvm.sh
+
+# added by travis gem
+[ -f /Users/linzichao/.travis/travis.sh ] && source /Users/linzichao/.travis/travis.sh
