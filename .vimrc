@@ -62,6 +62,7 @@ colorscheme simplifysimplify-light
 let g:simplifysimplify_dark_LineNr = 'off'
 let g:simplifysimplify_light_LineNr = 'off'
 
+set clipboard=unnamed
 set autoindent
 syntax on
 set ru
