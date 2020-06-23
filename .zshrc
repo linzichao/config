@@ -14,12 +14,13 @@ plugins=(k zsh-autosuggestions zsh-syntax-highlighting)
 
 # Source Zsh
 source $ZSH/oh-my-zsh.sh
+export TERM=xterm-256color
 
 # User configuration
 export NVM_DIR="/Users/linzichao/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 alias vscode="/Applications/Visual\ Studio\ Code.app/contents/Resources/app/bin/code"
-export PATH="$PATH:/Users/linzichao/kafka_2.12-2.0.0/bin"
+export PATH="$PATH:/Users/linzichao/kafka_2.12-2.0.0/bin:/Applications/clojure"
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 

@@ -1,8 +1,13 @@
 autojump
-black
 cabal-install
+clojure/tools/clojure
 coreutils
+htop
 lazygit
+lz4
+lzo
+pkcs11-helper
+tmux
 wget
 yarn
 zsh
